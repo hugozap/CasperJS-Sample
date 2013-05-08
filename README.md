@@ -1,5 +1,7 @@
 # CasperJS demo.
 
+A demo presenting some CasperJS features for testing web applications.
+
 
 # Set the url
 
