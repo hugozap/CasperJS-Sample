@@ -1,9 +1,13 @@
 # CasperJS demo.
 
 
-# start a test server
+# Set the url
 
-Change the startUrl to whatever url you use for the demo application.
+Change the startUrl to whatever url you use for the demo application. (a simple http server is recommended)
+
+	
+	var startUrl = 'http://localhost:3501/login.html';
+
 
 you can use yeoman inside demo1 folder to start a test server
 
@@ -18,4 +22,5 @@ you can use yeoman inside demo1 folder to start a test server
 * The demo app uses knockoutjs, no backend is used.
 * No real login (use any user/pwd combination)
 * Only the contacts menu works
+
 
