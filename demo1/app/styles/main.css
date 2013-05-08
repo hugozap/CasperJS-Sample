@@ -1,0 +1,40 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+#contactList{
+	 -webkit-transition: all 0.2s ease-in-out;
+	  -moz-transition: all 0.2s ease-in-out;
+	  -o-transition: all 0.2s ease-in-out;
+	  transition: all 0.2s ease-in-out;
+	  background-color: #fff;
+}
+
+.contactDetails{
+	 -webkit-transition: all 0.2s ease-in-out;
+	  -moz-transition: all 0.2s ease-in-out;
+	  -o-transition: all 0.2s ease-in-out;
+	  transition: all 0.2s ease-in-out;
+	    background-color: #fff;
+}
+
+.active{
+	opacity: 1;
+	visibility: visible;
+	//margin-left:0;
+}
+
+.inactive{
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
+	margin-left:-1000px;
+	position:absolute;
+}
+
+.contactImage{
+	display:none;
+}
+
+.contactRow{
+
+}
+

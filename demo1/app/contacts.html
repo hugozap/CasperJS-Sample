@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Contacts</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        
+        <script src="scripts/vendor/modernizr.min.js"></script>
+    </head>
+    <body>
+    <div class="container" style="margin-top:50px;height:1000px">
+        
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="home.html">My cool App</a>
+            <ul class="nav">
+              <li class=""><a href="#">Home</a></li>
+              <li class="active"><a href="contacts.html">Contacts</a></li>
+              <li><a href="mensajes.html">Inbox</a></li>
+               <li><a href="help.html">Help</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="">
+            <h1>My contacts</h1>
+            <table id="contactList" data-bind="css:{inactive:someoneSelected()}" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Blog</td>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:contacts">
+                    <tr >
+                        <td class="contactRow">
+                            <a class="contactLink" href="#" data-bind="text:name,click:App.selectContact"></a>
+                             <div class="contactImage">
+                                <img src="" data-bind="attr:{src:urlImage}" alt="">
+                            </div>
+                        </td>
+                         <td>
+                            <a data-bind="text:web"></a>
+                           
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+            <div class="contactDetails" data-bind="with:selectedContact,css:{inactive:someoneSelected()==false}">
+                
+               
+                <h2 data-bind="text:name"></h2>
+                 <button data-bind="click:App.goBackList" class="btn btn-large btn-success"><i class="icon-list"></i>Back to list</button>
+                
+                
+                <div class="well clearfix" style="margin-top:20px">
+                    
+                    <img src="" data-bind="attr:{src:urlImage}" alt="">
+                     
+                    <label for="">Name</label>
+                    <input data-bind="value:name" type="text" name="name" id="name">
+                        
+                    <label for="">Blog Url</label>
+                    <input data-bind="value:web" type="text" name="web" id="web">
+                        
+                    <label for="">Notes</label>
+                    <input data-bind="value:notes" type="text" name="notes" id="notes">
+                    
+                    <div>
+                        <button data-bind="click:App.deleteContact" class="btn btn-danger btn-large">Delete</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            
+        </div>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+        <script src="scripts/vendor/knockout.js"></script>
+        <script src="scripts/contacts.js"></script>
+        
+
+    </body>
+</html>
