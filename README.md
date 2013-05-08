@@ -17,7 +17,7 @@ you can use yeoman inside demo1 folder to start a test server
 
 # run the test file
 
-	casperjs test1.js
+	casperjs testapp.js
 
 **Notes**
 
